@@ -9,4 +9,4 @@ Mherzel Gyn Apusaga (2020-0048)
 Jandave P. Quitor (2020-1236)
 
 Project Description:
-This project aims to create a calculator with basic arithmetic functions in Python wih UI design.
+This project aims to create a calculator with basic arithmetic functions in Python with GUI design.
