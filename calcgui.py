@@ -13,7 +13,7 @@ calc.geometry('358x480')
 calc.configure(bg='#B9DDFF')
 
 # Setting window title
-calc.title('Calculator') 
+calc.title('Kasmala Calculator') 
 
 # Declaring window is not resizable
 calc.resizable(False,False)
@@ -34,7 +34,7 @@ txt_field = Entry(button_frame, textvariable=logic.equation, justify='right', fo
 
 # Setting up the numeric keypad (0-9) with decimal
 button1 = Button(button_frame,font= ('times new roman',12),text=' 1 ',bd=1,relief='ridge',
-                 fg='black', bg='#e6ecff', command= lambda: logic.press, height=3, width=8) 
+                 fg='black', bg='#e6ecff', command= lambda: logic.press(1), height=3, width=8) 
  
 button2 = Button(button_frame,font= ('times new roman',12),text=' 2 ',bd=1,relief='ridge',
                  fg='black', bg='#e6ecff',command=lambda: logic.press(2), height=3, width=8) 
@@ -85,7 +85,7 @@ clear = Button(button_frame,font= ('times new roman',12),text='C',bd=1,relief='r
 
 #Setting up the delete button (clear entry)
 ce = Button(button_frame,font= ('times new roman',12),text='CE',bd=1,relief='ridge',
-               fg='black', bg='#e6ecff',command=lambda:logic.ce, height=3, width=8) 
+               fg='black', bg='#e6ecff',command= logic.ce, height=3, width=8) 
 
 #Setting up the equal button that will evaluate the whole expression
 equal = Button(button_frame,font= ('times new roman',12),text=' = ',bd=1,relief='ridge',
@@ -119,5 +119,3 @@ clear.grid(row=4, column=2, sticky='ew')
 decimal.grid(row=5, column=0, sticky='ew')
 plus.grid(row=4, column=3, rowspan = 2, sticky='nsew')
 equal.grid(row=5, column=1, columnspan=2, sticky='ew')
-
-calc.mainloop() 
